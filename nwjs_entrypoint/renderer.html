@@ -1,0 +1,24 @@
+<script src="http://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="http://yastatic.net/share2/share.js"></script>
+<div id="research-ya-share"></div>
+<script>
+Ya.share2('research-ya-share', {
+    content: {
+        url: 'https://cardio-cloud.ru/cardio-service/requestInfo/id=457463',
+        title: 'CardioCloud. Researched by specialist Григорьева Елена Сергеевна',
+        description: 'It is required an urgent admission to the emergency department',
+        image: '/cardio-service/files/ecg_dongle_pack2.jpg'
+    },
+    theme: {
+        services: 'vkontakte,facebook,odnoklassniki,moimir,twitter,viber,whatsapp,telegram',
+        lang: 'en'
+    }
+});
+require('fs').writeFile(
+    'output.html',
+    document.getElementsByTagName('style')[0].outerHTML + document.getElementById('research-ya-share').outerHTML,
+    function () {
+        nw.App.quit();
+    }
+);
+</script>

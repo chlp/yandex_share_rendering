@@ -1,0 +1,7 @@
+{
+    "name": "RenderYandexShare",
+    "main": "renderer.html",
+    "window": {
+        "show": false
+    }
+}
